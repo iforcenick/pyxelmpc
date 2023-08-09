@@ -1,16 +1,16 @@
-#import "pyxel-event-emitter.h"
+#import "mpc-event-emitter.h"
 
-static PyxelEventEmitter* eventEmitterInstance = nil;
+static MPCEventEmitter* eventEmitterInstance = nil;
 
-@implementation PyxelEventEmitter
+@implementation MPCEventEmitter
 
 RCT_EXPORT_MODULE();
 
 
-+ (PyxelEventEmitter*)sharedInstance {
++ (MPCEventEmitter*)sharedInstance {
  return eventEmitterInstance;
 }
-+ (void)setSharedInstance:(PyxelEventEmitter*)instance {
++ (void)setSharedInstance:(MPCEventEmitter*)instance {
   eventEmitterInstance = instance;
 }
 

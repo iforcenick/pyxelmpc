@@ -1,0 +1,14 @@
+[workspace]
+members = [
+    'crates/px-mpc-protocol',
+    'crates/px-mpc-pubsub',
+    'crates/px-round-based',
+    
+    'crates/px-mpc-module',
+]
+
+exclude = [
+
+]
+[profile.release]
+panic = 'unwind'

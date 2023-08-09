@@ -1,11 +1,11 @@
 #import <React/RCTBridgeModule.h>
-#import "pyxel-rust-module.h"
-#import "pyxel-event-emitter.h"
+#import "mpc-module.h"
+#import "mpc-event-emitter.h"
 
 typedef void (^StartTimerCallback)(const char *, int);
 
 StartTimerCallback globalStartTimerCallback = NULL;
-PyxelEventEmitter *eventEmitter = NULL;
+MPCEventEmitter *eventEmitter = NULL;
 
 // C function wrapper to call the stored block indirectly
 void startTimerCallbackWrapper(const char *message, int duration) {
@@ -14,18 +14,19 @@ void startTimerCallbackWrapper(const char *message, int duration) {
   }
 }
 
-@interface PyxelRustModule : NSObject <RCTBridgeModule>
+@interface MPCModule : NSObject <RCTBridgeModule>
 @end
 
-@implementation PyxelRustModule
+@implementation MPCModule
 
 RCT_EXPORT_MODULE();
 
 RCT_EXPORT_METHOD(startTimer) {
-  eventEmitter = [PyxelEventEmitter sharedInstance];
+  eventEmitter = [MPCEventEmitter sharedInstance];
   
   globalStartTimerCallback = ^(const char *message, int duration) {
-    [eventEmitter sendEventWithName:@"message" body:@"Event data"];
+    // [eventEmitter sendEventWithName:@"message" body:@"Event data"];
+    [eventEmitter sendEventWithName:@"message" body:message];
   };
   
   // Call the original C function

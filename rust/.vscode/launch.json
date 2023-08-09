@@ -1,0 +1,306 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'gg20_keygen'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=gg20_keygen",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_keygen",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'gg20_keygen'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=gg20_keygen",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_keygen",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'gg20_sm_manager'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=gg20_sm_manager",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_sm_manager",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'gg20_sm_manager'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=gg20_sm_manager",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_sm_manager",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'gg20_signing'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=gg20_signing",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_signing",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'gg20_signing'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=gg20_signing",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_signing",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'gg20_sm_client'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=gg20_sm_client",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_sm_client",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'gg20_sm_client'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=gg20_sm_client",
+          "--package=px-mpc-protocol"
+        ],
+        "filter": {
+          "name": "gg20_sm_client",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'px-round-based'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=px-round-based"
+        ],
+        "filter": {
+          "name": "px-round-based",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'simulate_silly_protocol'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=simulate_silly_protocol",
+          "--package=px-round-based"
+        ],
+        "filter": {
+          "name": "simulate_silly_protocol",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'px-mpc-pubsub'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "px-mpc-pubsub",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'px-mpc-pubsub'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=px-mpc-pubsub",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "px-mpc-pubsub",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'px-mpc-pubsub'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=px-mpc-pubsub",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "px-mpc-pubsub",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug example 'server'",
+      "cargo": {
+        "args": [
+          "build",
+          "--example=server",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "server",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in example 'server'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--example=server",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "server",
+          "kind": "example"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=test",
+          "--package=px-mpc-pubsub"
+        ],
+        "filter": {
+          "name": "test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

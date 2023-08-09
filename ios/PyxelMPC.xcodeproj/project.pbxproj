@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PyxelMPCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PyxelMPCTests.m */; };
+		080B60572A7E46F700E17CB6 /* mpc-event-emitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 080B60552A7E46F700E17CB6 /* mpc-event-emitter.m */; };
+		080B60582A7E46F700E17CB6 /* mpc-module.m in Sources */ = {isa = PBXBuildFile; fileRef = 080B60562A7E46F700E17CB6 /* mpc-module.m */; };
+		080B605A2A7E4B2300E17CB6 /* libpx_mpc_module.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 080B60532A7E45CB00E17CB6 /* libpx_mpc_module.dylib */; };
 		083EA9602A6DA4DA00D625EF /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
-		083EA9622A6DA50D00D625EF /* libPods-PyxelMPC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 083EA9612A6DA50D00D625EF /* libPods-PyxelMPC.a */; };
-		083EA9632A6DA7B700D625EF /* libpyxel_rust_module.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 08E0B8E02A6BA10100492231 /* libpyxel_rust_module.dylib */; };
-		08A5C16E2A76907700933563 /* pyxel-rust-module.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C16D2A76907700933563 /* pyxel-rust-module.m */; };
-		08A5C1712A7703E200933563 /* pyxel-event-emitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A5C16F2A76E62F00933563 /* pyxel-event-emitter.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-PyxelMPC-PyxelMPCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-PyxelMPC-PyxelMPCTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -33,23 +31,19 @@
 		00E356EE1AD99517003FC87E /* PyxelMPCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PyxelMPCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PyxelMPCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PyxelMPCTests.m; sourceTree = "<group>"; };
-		083EA9612A6DA50D00D625EF /* libPods-PyxelMPC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-PyxelMPC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		08A5C16D2A76907700933563 /* pyxel-rust-module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "pyxel-rust-module.m"; path = "PyxelRustModule/pyxel-rust-module.m"; sourceTree = "<group>"; };
-		08A5C16F2A76E62F00933563 /* pyxel-event-emitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "pyxel-event-emitter.m"; path = "PyxelRustModule/pyxel-event-emitter.m"; sourceTree = "<group>"; };
-		08A8AE412A6CEE2800D7DC2A /* PyxelRustModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PyxelRustModule.m; path = PyxelRustModule/PyxelRustModule.m; sourceTree = "<group>"; };
-		08E0B8DA2A6B9BB600492231 /* libpyxelchain_bridge.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpyxelchain_bridge.dylib; path = PyxelRustModule/libpyxelchain_bridge.dylib; sourceTree = "<group>"; };
-		08E0B8E02A6BA10100492231 /* libpyxel_rust_module.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpyxel_rust_module.dylib; path = PyxelRustModule/libpyxel_rust_module.dylib; sourceTree = "<group>"; };
+		080B60532A7E45CB00E17CB6 /* libpx_mpc_module.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpx_mpc_module.dylib; path = "../rust/target/x86_64-apple-ios/release/libpx_mpc_module.dylib"; sourceTree = "<group>"; };
+		080B60552A7E46F700E17CB6 /* mpc-event-emitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "mpc-event-emitter.m"; path = "PyxelMPCModule/mpc-event-emitter.m"; sourceTree = "<group>"; };
+		080B60562A7E46F700E17CB6 /* mpc-module.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "mpc-module.m"; path = "PyxelMPCModule/mpc-module.m"; sourceTree = "<group>"; };
+		08BD04402A8117A20031962E /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcurl.a; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PyxelMPC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PyxelMPC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PyxelMPC/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = PyxelMPC/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PyxelMPC/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PyxelMPC/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PyxelMPC/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-PyxelMPC-PyxelMPCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PyxelMPC-PyxelMPCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-PyxelMPC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyxelMPC.debug.xcconfig"; path = "Target Support Files/Pods-PyxelMPC/Pods-PyxelMPC.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-PyxelMPC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyxelMPC.release.xcconfig"; path = "Target Support Files/Pods-PyxelMPC/Pods-PyxelMPC.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-PyxelMPC-PyxelMPCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyxelMPC-PyxelMPCTests.debug.xcconfig"; path = "Target Support Files/Pods-PyxelMPC-PyxelMPCTests/Pods-PyxelMPC-PyxelMPCTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-PyxelMPC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PyxelMPC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PyxelMPC/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-PyxelMPC-PyxelMPCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PyxelMPC-PyxelMPCTests.release.xcconfig"; path = "Target Support Files/Pods-PyxelMPC-PyxelMPCTests/Pods-PyxelMPC-PyxelMPCTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -60,7 +54,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-PyxelMPC-PyxelMPCTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				083EA9632A6DA7B700D625EF /* libpyxel_rust_module.dylib in Frameworks */,
-				083EA9622A6DA50D00D625EF /* libPods-PyxelMPC.a in Frameworks */,
+				080B605A2A7E4B2300E17CB6 /* libpx_mpc_module.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +101,9 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				083EA9612A6DA50D00D625EF /* libPods-PyxelMPC.a */,
-				08E0B8E02A6BA10100492231 /* libpyxel_rust_module.dylib */,
-				08E0B8DA2A6B9BB600492231 /* libpyxelchain_bridge.dylib */,
+				08BD04402A8117A20031962E /* libcurl.a */,
+				080B60532A7E45CB00E17CB6 /* libpx_mpc_module.dylib */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-PyxelMPC.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-PyxelMPC-PyxelMPCTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,9 +118,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				08A5C16F2A76E62F00933563 /* pyxel-event-emitter.m */,
-				08A5C16D2A76907700933563 /* pyxel-rust-module.m */,
-				08A8AE412A6CEE2800D7DC2A /* PyxelRustModule.m */,
+				080B60552A7E46F700E17CB6 /* mpc-event-emitter.m */,
+				080B60562A7E46F700E17CB6 /* mpc-module.m */,
 				13B07FAE1A68108700A75B9A /* PyxelMPC */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PyxelMPCTests */,
@@ -428,8 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A5C1712A7703E200933563 /* pyxel-event-emitter.m in Sources */,
-				08A5C16E2A76907700933563 /* pyxel-rust-module.m in Sources */,
+				080B60572A7E46F700E17CB6 /* mpc-event-emitter.m in Sources */,
+				080B60582A7E46F700E17CB6 /* mpc-module.m in Sources */,
 				083EA9602A6DA4DA00D625EF /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -552,7 +540,7 @@
 					"\"$(PODS_ROOT)/boost\"",
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_TARGET_SRCROOT)/include/\"",
-					"\"$(PODS_ROOT)/../PyxelRustModule\"",
+					"\"$(PODS_ROOT)/../PyxelMPCModule\"",
 				);
 				INFOPLIST_FILE = PyxelMPC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -562,7 +550,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/PyxelRustModule",
+					"$(PROJECT_DIR)/../rust/target/x86_64-apple-ios/debug/",
+					"/usr/local/ios_sim/**",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
@@ -631,7 +621,7 @@
 					"\"$(PODS_ROOT)/boost\"",
 					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
 					"\"$(PODS_TARGET_SRCROOT)/include/\"",
-					"\"$(PODS_ROOT)/../PyxelRustModule\"",
+					"\"$(PODS_ROOT)/../PyxelMPCModule\"",
 				);
 				INFOPLIST_FILE = PyxelMPC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -641,7 +631,9 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/PyxelRustModule",
+					"$(PROJECT_DIR)/../rust/target/x86_64-apple-ios/release/",
+					"/usr/local/ios_sim/**",
+					"$(PROJECT_DIR)",
 				);
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
