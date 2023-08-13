@@ -154,3 +154,6 @@ Feel free to [reach out](mailto:github@kzencorp.com) or join ZenGo X [Telegram](
 [3] <https://eprint.iacr.org/2019/503.pdf>
 
 [4] <https://eprint.iacr.org/2020/540.pdf>
+
+
+cargo build --examples -p px-mpc-protocol --release

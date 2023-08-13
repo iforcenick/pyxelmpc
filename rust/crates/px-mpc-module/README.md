@@ -22,3 +22,5 @@ https://stackoverflow.com/questions/76607938/cross-compile-libcurl-to-run-on-ios
 
 cargo build -p px-mpc-module --target x86_64-apple-ios
 cargo build -p px-mpc-module --target x86_64-apple-ios --release
+
+cbindgen --lang c --crate px-mpc-module --output ../ios/PyxelMPCModule/mpc-module.h

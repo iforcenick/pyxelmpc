@@ -28,7 +28,6 @@ struct Cli {
 
 #[tokio::main]
 async fn main() -> Result<()> {
-    println!("Start");
     let args: Cli = Cli::from_args();
     let mut output_file = tokio::fs::OpenOptions::new()
         .write(true)
@@ -40,13 +39,11 @@ async fn main() -> Result<()> {
     let (_i, incoming, outgoing) = join_computation(args.address, &args.room)
         .await
         .context("join computation")?;
-    println!("QQQ");
 
     let incoming = incoming.fuse();
     tokio::pin!(incoming);
     tokio::pin!(outgoing);
 
-    println!("TTT");
 
     let keygen = Keygen::new(args.index, args.threshold, args.number_of_parties)?;
     let output = AsyncProtocol::new(keygen, incoming, outgoing)
@@ -57,6 +54,7 @@ async fn main() -> Result<()> {
     tokio::io::copy(&mut output.as_slice(), &mut output_file)
         .await
         .context("save output to file")?;
+    println!("Finished!");
 
     Ok(())
 }

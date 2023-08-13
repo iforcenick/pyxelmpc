@@ -22,7 +22,7 @@ RCT_EXPORT_MODULE();
 
 - (NSArray<NSString *> *)supportedEvents {
   // Define the list of events that can be emitted
-  return @[@"message"];
+  return @[@"outgoing"];
 }
 
 // - (void)sendEventWithName:(NSString *)name body:(id)body {

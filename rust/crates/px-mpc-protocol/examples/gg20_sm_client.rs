@@ -72,6 +72,7 @@ impl SmClient {
     }
 
     pub async fn issue_index(&self) -> Result<u16> {
+        println!("issue_index");
         let response = self
             .http_client
             .post("issue_unique_idx")
@@ -82,6 +83,7 @@ impl SmClient {
     }
 
     pub async fn broadcast(&self, message: &str) -> Result<()> {
+        println!("broadcast: {}", message.len());
         self.http_client
             .post("broadcast")
             .body(message)
@@ -96,11 +98,9 @@ impl SmClient {
             .get("subscribe")
             .await
             .map_err(|e| e.into_inner())?;
-        println!("x");
         let events = async_sse::decode(response);
-        println!("y");
         Ok(events.filter_map(|msg| async {
-            println!("z");
+            println!("receive");
             match msg {
                 Ok(async_sse::Event::Message(msg)) => Some(
                     String::from_utf8(msg.into_bytes())
